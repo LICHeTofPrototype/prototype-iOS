@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,15 @@
 		62CEF68B2442E7FA00327150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62CEF6892442E7FA00327150 /* LaunchScreen.storyboard */; };
 		62CEF6962442E7FA00327150 /* lichetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF6952442E7FA00327150 /* lichetTests.swift */; };
 		62CEF6A12442E7FA00327150 /* lichetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF6A02442E7FA00327150 /* lichetUITests.swift */; };
+		62CEF6B3244310FD00327150 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 62CEF6B2244310FD00327150 /* Charts */; };
+		62CEF6BA24434B9200327150 /* PnnClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF6B924434B9200327150 /* PnnClient.swift */; };
+		62CEF6BC24434F1F00327150 /* PnnResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF6BB24434F1F00327150 /* PnnResponse.swift */; };
+		62CEF6BF24435F6D00327150 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF6BE24435F6D00327150 /* Errors.swift */; };
+		62CEF6C3244360DF00327150 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF6C2244360DF00327150 /* Parse.swift */; };
+		62CEF6C52443664F00327150 /* PnnRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF6C42443664F00327150 /* PnnRequest.swift */; };
+		62CEF6C82443683B00327150 /* GraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF6C72443683B00327150 /* GraphViewModel.swift */; };
+		62CEF6CB24436C1500327150 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF6CA24436C1500327150 /* GraphView.swift */; };
+		62CEF6CD2443704100327150 /* ContenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CEF6CC2443704100327150 /* ContenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,14 @@
 		62CEF69C2442E7FA00327150 /* lichetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lichetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62CEF6A02442E7FA00327150 /* lichetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lichetUITests.swift; sourceTree = "<group>"; };
 		62CEF6A22442E7FA00327150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62CEF6B924434B9200327150 /* PnnClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PnnClient.swift; sourceTree = "<group>"; };
+		62CEF6BB24434F1F00327150 /* PnnResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PnnResponse.swift; sourceTree = "<group>"; };
+		62CEF6BE24435F6D00327150 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		62CEF6C2244360DF00327150 /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
+		62CEF6C42443664F00327150 /* PnnRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PnnRequest.swift; sourceTree = "<group>"; };
+		62CEF6C72443683B00327150 /* GraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewModel.swift; sourceTree = "<group>"; };
+		62CEF6CA24436C1500327150 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		62CEF6CC2443704100327150 /* ContenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62CEF6B3244310FD00327150 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +117,12 @@
 		62CEF67D2442E7F700327150 /* lichet */ = {
 			isa = PBXGroup;
 			children = (
+				62CEF6C924436AA200327150 /* View */,
+				62CEF6C6244367DD00327150 /* ViewModel */,
+				62CEF6C0244360B300327150 /* Util */,
+				62CEF6B42443313100327150 /* Api */,
 				62CEF67E2442E7F700327150 /* AppDelegate.swift */,
 				62CEF6802442E7F700327150 /* SceneDelegate.swift */,
-				62CEF6822442E7F700327150 /* ContentView.swift */,
 				62CEF6842442E7FA00327150 /* Assets.xcassets */,
 				62CEF6892442E7FA00327150 /* LaunchScreen.storyboard */,
 				62CEF68C2442E7FA00327150 /* Info.plist */,
@@ -136,6 +157,83 @@
 			path = lichetUITests;
 			sourceTree = "<group>";
 		};
+		62CEF6B42443313100327150 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				62CEF6BD24435F5700327150 /* Error */,
+				62CEF6B824434A8200327150 /* Client */,
+				62CEF6B724434A7700327150 /* Response */,
+				62CEF6B524434A5D00327150 /* Request */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		62CEF6B524434A5D00327150 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				62CEF6C42443664F00327150 /* PnnRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		62CEF6B724434A7700327150 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				62CEF6BB24434F1F00327150 /* PnnResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		62CEF6B824434A8200327150 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				62CEF6B924434B9200327150 /* PnnClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		62CEF6BD24435F5700327150 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				62CEF6BE24435F6D00327150 /* Errors.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		62CEF6C0244360B300327150 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				62CEF6C1244360C700327150 /* Parse */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		62CEF6C1244360C700327150 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				62CEF6C2244360DF00327150 /* Parse.swift */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		62CEF6C6244367DD00327150 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				62CEF6C72443683B00327150 /* GraphViewModel.swift */,
+				62CEF6CC2443704100327150 /* ContenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		62CEF6C924436AA200327150 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				62CEF6822442E7F700327150 /* ContentView.swift */,
+				62CEF6CA24436C1500327150 /* GraphView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +250,9 @@
 			dependencies = (
 			);
 			name = lichet;
+			packageProductDependencies = (
+				62CEF6B2244310FD00327150 /* Charts */,
+			);
 			productName = lichet;
 			productReference = 62CEF67B2442E7F700327150 /* lichet.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +325,9 @@
 				Base,
 			);
 			mainGroup = 62CEF6722442E7F700327150;
+			packageReferences = (
+				62CEF6B1244310FD00327150 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 62CEF67C2442E7F700327150 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,8 +371,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62CEF6C52443664F00327150 /* PnnRequest.swift in Sources */,
+				62CEF6BC24434F1F00327150 /* PnnResponse.swift in Sources */,
+				62CEF6C82443683B00327150 /* GraphViewModel.swift in Sources */,
 				62CEF67F2442E7F700327150 /* AppDelegate.swift in Sources */,
+				62CEF6BA24434B9200327150 /* PnnClient.swift in Sources */,
+				62CEF6CB24436C1500327150 /* GraphView.swift in Sources */,
 				62CEF6812442E7F700327150 /* SceneDelegate.swift in Sources */,
+				62CEF6BF24435F6D00327150 /* Errors.swift in Sources */,
+				62CEF6CD2443704100327150 /* ContenViewModel.swift in Sources */,
+				62CEF6C3244360DF00327150 /* Parse.swift in Sources */,
 				62CEF6832442E7F700327150 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,7 +676,7 @@
 				62CEF6A42442E7FA00327150 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		62CEF6A52442E7FA00327150 /* Build configuration list for PBXNativeTarget "lichet" */ = {
 			isa = XCConfigurationList;
@@ -573,7 +685,7 @@
 				62CEF6A72442E7FA00327150 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		62CEF6A82442E7FA00327150 /* Build configuration list for PBXNativeTarget "lichetTests" */ = {
 			isa = XCConfigurationList;
@@ -582,7 +694,7 @@
 				62CEF6AA2442E7FA00327150 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		62CEF6AB2442E7FA00327150 /* Build configuration list for PBXNativeTarget "lichetUITests" */ = {
 			isa = XCConfigurationList;
@@ -591,9 +703,28 @@
 				62CEF6AD2442E7FA00327150 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62CEF6B1244310FD00327150 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62CEF6B2244310FD00327150 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62CEF6B1244310FD00327150 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 62CEF6732442E7F700327150 /* Project object */;
 }
