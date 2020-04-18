@@ -16,3 +16,6 @@
   端末側で承認作業が必要↓
   
   https://support.apple.com/ja-jp/HT204460
+
+
+![prototype-ios](https://user-images.githubusercontent.com/35129131/79639018-d75ca400-81c3-11ea-828e-671ad675c78e.gif)
